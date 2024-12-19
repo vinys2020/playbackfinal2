@@ -170,7 +170,7 @@
     transform: translateY(0);
   }
   
-  
+
   
   .scroll-top {
     display: none;
@@ -545,6 +545,9 @@
   }
 }
 
+
+
+  
   section.img {
     columns: 2;
     padding: 16px 36px;

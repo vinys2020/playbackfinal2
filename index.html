@@ -212,7 +212,7 @@
 
 <!-- Animación CSS -->
 <style>
-  /* Animación de la flecha */
+  /* Animación de la flecha hacia la derecha */
   @keyframes bounce {
     0%, 100% {
       transform: translateX(0);
@@ -238,7 +238,10 @@
     if (audioPlayer.muted) {
       // Desactivar el mute, reproducir el audio y cambiar el icono
       audioPlayer.muted = false;
-      audioPlayer.play();
+      audioPlayer.play().catch(error => {
+        // Mostrar el error en consola si no se puede reproducir
+        console.error('No se pudo reproducir el audio:', error);
+      });
       speakerIcon.classList.remove('bi-volume-mute-fill');
       speakerIcon.classList.add('bi-volume-up-fill');
     } else {
@@ -253,12 +256,29 @@
     soundHint.style.display = 'none';
   };
 
+  // Variables para manejar la primera interacción
+  let firstInteraction = false;
+
   // Acción al hacer clic o tocar el parlante
-  speakerButton.addEventListener('click', toggleSpeaker);
-  speakerButton.addEventListener('touchstart', (e) => {
-    toggleSpeaker();
-  });
+  const handleTouchOrClick = (e) => {
+    e.preventDefault(); // Prevenir la acción predeterminada del touch (especialmente en dispositivos móviles)
+
+    // Si es la primera interacción, simplemente registrar la acción
+    if (!firstInteraction) {
+      firstInteraction = true;
+      // No se intenta reproducir aún, solo registrar la acción
+      soundHint.style.display = 'none'; // Ocultar el cartel de "Sound On"
+    } else {
+      // Si ya se hizo la primera interacción, reproducir el audio
+      toggleSpeaker();
+    }
+  };
+
+  // Escuchar tanto el evento de clic como el de touch
+  speakerButton.addEventListener('click', handleTouchOrClick);
+  speakerButton.addEventListener('touchstart', handleTouchOrClick);
 </script>
+
 
 
 

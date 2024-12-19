@@ -25,6 +25,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <link rel="preload" href="/img/TAKIN.webp" as="image">
+
     <link rel="icon" href="img/Primario Blanco.png" />
     <link rel="stylesheet" href="css/style.css" />
     <meta
@@ -176,14 +178,8 @@
     muted
     loop
     playsinline
-    poster="img/video-placeholder.jpg"
     preload="metadata"
   >
-    <source
-      src="img/Diseño sin título (3)-low.mp4"
-      type="video/mp4"
-      media="all and (max-width: 768px)"
-    />
     <source
       src="img/Diseño sin título (3).mp4"
       type="video/mp4"
@@ -307,31 +303,6 @@
   </div>
 
 
-<script>
-  // Lazy Loading para los videos
-  document.addEventListener("DOMContentLoaded", function () {
-    const lazyVideos = document.querySelectorAll(".lazy-video");
-
-    lazyVideos.forEach((video) => {
-      const observer = new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const src = video.dataset.src;
-              if (src) {
-                video.src = src;
-                video.removeAttribute("data-src");
-              }
-              obs.unobserve(video);
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      observer.observe(video);
-    });
-  });
-</script>
 
 
           <article
@@ -394,15 +365,17 @@
               </div>
             </div>
           </article>
-          <section class="birthday-section d-flex justify-content-center align-items-center mb-5">
+          <section class="birthday-section d-flex justify-content-center align-items-center mb-5 slide-up">
             <div class="container">
               <div class="row">
                 <!-- Artículo de texto -->
                 <article class="col-12 col-lg-6">
                   <h1 class="titulocelular" style="font-family: 'Roboto', sans-serif; color: white; margin-top: 100px;">¡Celebra tu Cumpleaños con Nosotros!🥳</h1>
                   <p style="font-size: 1.2rem; color: white; margin-top: 30px;">
-                    ¡¿Es tu cumpleaños?! 🎉 ¡Tu entrada es completamente <b>GRATIS!</b> Solo tienes que <b>asegurarte detraer tu DNI, ¡y listo!</b> Ven a disfrutar de una fiesta increíble, llena de sorpresas, música y mucha diversión. ¡Te esperamos para que celebremos juntos tu gran día!
-                  </p>
+                    Hola 🙋! Cómo estás ? Vimos que estás cumpliendo años el mes de DICIEMBRE y quería invitarte a que lo festejes a lo GRANDE en PLAY BACK !! 
+                    👉🏼 Los beneficios para vos son acceso gratis VIP HASTA LAS 3 hs + 1 consumición ! 
+                    👉🏼Para tus amigos tenemos los combos amigos - 4x3 | 
+                    🚨Para anotarte en la lista solo debes ser +18 (mujeres) o +21 (varones) . (DNI OBLIGATORIO)                  </p>
                   
                   <!-- Botón de WhatsApp -->
                   <div class="text-center mt-4">
@@ -448,8 +421,9 @@
           </div>
         </article>
 
-        <article class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100  slide-up">
+        <article class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100 slide-up">
           <div class="promo-container text-center" style="width: 80%;">
+        
             <!-- Aviso Importante -->
             <h2 style="color: white; margin-bottom: 30px">
               ⚠️¡Aviso Importante!⚠️
@@ -493,33 +467,28 @@
                 <p>Adquiere tus entradas únicamente con RRPP oficiales para evitar inconvenientes.</p>
               </div>
             </div>
-          </div>
-
-          
-        </article>
-
-        <article class="col-12 d-flex justify-content-center w-100 mb-5">
-          <div class="promo-container text-center" style="width: 80%; margin-bottom: 50px;">
-            <div class="d-flex justify-content-center align-items-center flex-wrap" style="margin-top: 0;">
+        
+            <!-- Logos debajo del aviso -->
+            <div class="d-flex justify-content-center align-items-center flex-wrap" style="margin-top: 50px;">
               <!-- Logo 1 -->
               <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
                 <img 
                   src="/img/TAKIN.webp" 
                   alt="Logo 1" 
                   width="150" 
-                  height="150" 
+                  height="150"
                   loading="lazy" 
                   style="border-radius: 10px; width: 100%; max-width: 150px;"
                 />
               </div>
-
+        
               <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
                 <img 
                   src="/img/triplogofinal1.webp" 
                   alt="Logo 3" 
                   width="200" 
-                  height="200" 
-                  loading="lazy" 
+                  height="200"
+                  loading="lazy"
                   style="border-radius: 10px; width: 100%; max-width: 200px;"
                 />
               </div>
@@ -529,15 +498,15 @@
                   src="/img/PrimarioBlanco.webp" 
                   alt="Logo 2" 
                   width="150" 
-                  height="150" 
-                  loading="lazy" 
+                  height="150"
+                  loading="lazy"
                   style="border-radius: 10px; width: 100%; max-width: 150px;"
                 />
               </div>
-              <!-- Logo 3 -->
             </div>
           </div>
         </article>
+        
         
 
 
@@ -547,7 +516,7 @@
 
       <section
         id="single-page"
-        class="min-vh-100 bg-hero-image"
+        class="min-vh-100"
         style="background-color: rgb(228, 221, 221)"
       >
         <article class="min-vh-100 bg-white d-flex align-items-center">
@@ -770,6 +739,13 @@
           </div>
         </article>
       </section>
+
+      <script>
+        window.addEventListener('load', function() {
+          document.querySelector('#single-page').classList.add('loaded');
+        });
+      </script>
+      
 
       <button
         class="scroll-top"
@@ -1414,6 +1390,31 @@
       </div>
     </footer>
     <script>
+      // Lazy Loading para los videos
+      document.addEventListener("DOMContentLoaded", function () {
+        const lazyVideos = document.querySelectorAll(".lazy-video");
+    
+        lazyVideos.forEach((video) => {
+          const observer = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const src = video.dataset.src;
+                  if (src) {
+                    video.src = src;
+                    video.removeAttribute("data-src");
+                  }
+                  obs.unobserve(video);
+                }
+              });
+            },
+            { threshold: 0.1 }
+          );
+          observer.observe(video);
+        });
+      });
+    </script>
+    <script>
       document.addEventListener("DOMContentLoaded", () => {
         const lazyImages = document.querySelectorAll("img[loading='lazy']");
         const observer = new IntersectionObserver((entries, observer) => {
@@ -1475,17 +1476,7 @@
         lastScrollY = currentScrollY;
       });
     </script>
-        <script>
-          // Función para ocultar la pantalla de carga y mostrar el contenido
-          window.addEventListener('load', function() {
-              const loader = document.getElementById('loader');
-              const content = document.getElementById('content');
-              
-              // Ocultar el loader y mostrar el contenido
-              loader.style.display = 'none';
-              content.style.display = 'block';
-          });
-      </script>
     <script src="js/main.js"></script>
+
   </body>
 </html>

@@ -25,9 +25,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <link rel="preload" href="/img/TAKIN.webp" as="image">
-    <link rel="preload" href="/img/PrimarioBlanco.webp" as="image">
-    <link rel="preload" href="/img/triplogofinal1.webp" as="image">
 
 
     <link rel="icon" href="img/Primario Blanco.png" />
@@ -367,7 +364,7 @@
                   </p>
                   
                   <a
-                    href="https://api.whatsapp.com/send?phone=5493812024221&text=¡Hola!%20Estoy%20interesado%20en%20aprovechar%20el%2020%%20de%20descuento%20en%20entradas%20VIP.%20¿Podrías%20confirmarme%20los%20detalles%20y%20la%20disponibilidad%20para%20realizar%20la%20compra%20por%20favor?%20¡Gracias!"
+                    href="https://api.whatsapp.com/send?phone=5493812024221&text=¡Hola!%20Estoy%20interesado%20en%20aprovechar%20la%20promo%20de%204x3%20en%20entradas%20generales.%20¿Podrías%20confirmarme%20los%20detalles%20y%20la%20disponibilidad%20para%20realizar%20la%20compra%20por%20favor?%20¡Gracias!"
                     target="_blank"
                     class="btn btn-primary"
                   >
@@ -483,45 +480,64 @@
                 <p>Adquiere tus entradas únicamente con RRPP oficiales para evitar inconvenientes.</p>
               </div>
             </div>
+            
+          </div>
+        </article>
+
+        <article class="col-12 d-flex justify-content-center w-100 mb-5">
+          <div class="promo-container text-center" style="width: 80%; margin-bottom: 50px;">
+            <div class="row justify-content-center" style="margin-top: 0;">
         
-            <!-- Logos debajo del aviso -->
-            <div class="d-flex justify-content-center align-items-center flex-wrap" style="margin-top: 50px;">
-              <!-- Logo 1 -->
-              <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
-                <img 
-                  src="/img/TAKIN.webp" 
-                  alt="Logo 1" 
-                  width="150" 
-                  height="150"
-                  loading="lazy" 
-                  style="border-radius: 10px; width: 100%; max-width: 150px;"
-                />
+              <!-- Logo 1 (se mostrará en móvil a la izquierda) -->
+              <div class="col-6 col-md-4 mb-3">
+                <div class="logo-container">
+                  <img 
+                    src="/img/TAKIN.webp" 
+                    alt="Logo 1" 
+                    width="150" 
+                    height="150" 
+                    style="border-radius: 10px;"
+                    decoding="async"
+                    loading="eager"
+                  />
+                </div>
               </div>
         
-              <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
-                <img 
-                  src="/img/triplogofinal1.webp" 
-                  alt="Logo 3" 
-                  width="200" 
-                  height="200"
-                  loading="lazy"
-                  style="border-radius: 10px; width: 100%; max-width: 200px;"
-                />
+              <!-- Logo 2 (se mostrará en móvil en el medio) -->
+              <div class="col-6 col-md-4 mb-3">
+                <div class="logo-container">
+                  <img 
+                    src="/img/PrimarioBlanco.webp" 
+                    alt="Logo 2" 
+                    width="150" 
+                    height="150" 
+                    style="border-radius: 10px;"
+                    decoding="async"
+                    loading="eager"
+                  />
+                </div>
               </div>
-              <!-- Logo 2 -->
-              <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
-                <img 
-                  src="/img/PrimarioBlanco.webp" 
-                  alt="Logo 2" 
-                  width="150" 
-                  height="150"
-                  loading="lazy"
-                  style="border-radius: 10px; width: 100%; max-width: 150px;"
-                />
+        
+              <!-- Logo 3 (se mostrará en móvil a la derecha) -->
+              <div class="col-6 col-md-4 mb-3">
+                <div class="logo-container">
+                  <img 
+                    src="/img/triplogofinal.webp" 
+                    alt="Logo 3" 
+                    width="150" 
+                    height="150" 
+                    style="border-radius: 10px;"
+                    decoding="async"
+                    loading="eager"
+                  />
+                </div>
               </div>
+        
             </div>
           </div>
         </article>
+        
+        
         
         
 
@@ -576,7 +592,9 @@
                             margin-bottom: 22px;
                             border-radius: 15px;
                           "
-                          alt="emailMkt"
+                          decoding="async"
+                          loading="eager"
+                          alt="dospistas"
                         />
                       </article>
 
@@ -605,6 +623,8 @@
                               class="img-fluid"
                               style="max-width: 100%; height: auto; margin-bottom: 5%; border-radius: 15px;"
                               alt="Imagen 1"
+                              decoding="async"
+                              loading="eager"
                             />
                           </div>
                       
@@ -615,6 +635,8 @@
                               class="img-fluid"
                               style="max-width: 100%; height: auto; margin-bottom: 5%;border-radius: 15px; margin-bottom: 20px;"
                               alt="Imagen 2"
+                              decoding="async"
+                              loading="eager"
                             />
                           </div>
                         </div>
@@ -652,6 +674,8 @@
                             margin-top: 30px;
                           "
                           alt="paginasWeb"
+                          decoding="async"
+                          loading="eager"
                         />
                       </article>
                       <article class="col-12 text-center">
@@ -680,6 +704,8 @@
                             border-radius: 15px;
                           "
                           alt="gestionRedes"
+                          decoding="async"
+                          loading="eager"
                         />
                       </article>
                       <article class="col-12 text-center">
@@ -705,6 +731,8 @@
                             border-radius: 15px;
                           "
                           alt="ecommerceApp"
+                          decoding="async"
+                          loading="eager"
                         />
                       </article>
                       <article class="col-12 text-center">
@@ -733,6 +761,8 @@
                             border-radius: 15px;
                           "
                           alt="CEO"
+                          decoding="async"
+                          loading="eager"
                         />
                       </article>
                       <article class="col-12 text-center">
@@ -786,6 +816,7 @@
         <article
           class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100 mb-3 mt-4"
         >
+        
           <div class="text-center">
             <h2 style="color: rgb(255, 255, 255); margin-top: 50px">
               Galería de Fotografías <i class="bi bi-file-earmark-image"></i>

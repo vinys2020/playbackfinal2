@@ -16,6 +16,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
@@ -47,8 +48,8 @@
   <body style="background-color: black">
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black" id="myNavbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/Secundario.png" alt="Publica isologotipo" />
+        <a class="navbar-brand" href="index.html#">
+          <img src="img/logonavideño.png" alt="Publica isologotipo" />
         </a>
         <button
           class="navbar-toggler border-0"
@@ -187,7 +188,7 @@
           
 
           <article
-            class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100 mb-5"
+            class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100 mb-2"
           >
             <div class="text-center">
               <img
@@ -195,9 +196,7 @@
                 alt="Imagen Promocional"
                 style="
                   width: calc(100% - 30px);
-                  max-width: 800px;
                   border-radius: 0px;
-                  padding: 0 20px 30px;
                 "
               />
             </div>
@@ -318,37 +317,48 @@
               class="promo-container text-center"
               style="width: 80%; margin-bottom: 50px"
             >
-              <h2 style="color: white; margin-bottom: 50px">
-                ¡Promociones Especiales de Entradas!<span class="new-badge"
-                  ><b>Nuevo</b></span
-                >
+            <h2 class="promo-title" style="color: white;">
+              ¡Promociones Especiales!
+              <span class="new-badge" ><b>c/stock limitado</b></span>
+            </h2>
               </h2>
-              <div class="promo-cards d-flex justify-content-around flex-wrap">
+              <div class="promo-cards d-flex justify-content-around flex-wrap" style="margin-top: 50px;">
                 <div
                   class="promo-card bg-dark text-white p-3 m-2"
                   style="border-radius: 20px; flex: 1 1 30%; max-width: 400px"
                 >
-                  <h3>Compra 3x2 en Entradas Generales</h3>
-                  <p>Compra 3 entradas y paga solo 2. ¡No te lo pierdas!</p>
+                  <h3>Entradas Generales</h3>
+                  <p>Obtén un 20% de descuento en tu entrada General. ¡No te pierdas esta oferta!</p>
+                  <p style="font-size: 1.2rem; font-weight: bold;">
+                    <span style="text-decoration: line-through; color: #e62222;">$7.000</span>  <span style="color:green; font-size: 1.8rem;">$5.500</span>
+                  </p>
                   <a
-                    href="https://api.whatsapp.com/send?phone=5493814685931&text=Hola%2C%20quiero%20aprovechar%20la%20promoci%C3%B3n%20Compra%203x2%20en%20Entradas%20Generales."
+                  href="https://api.whatsapp.com/send?phone=5493814685931&text=¡Hola!%20Estoy%20interesado%20en%20aprovechar%20el%2020%%20de%20descuento%20en%20entradas%20generales.%20Quisiera%20saber%20los%20detalles%20y%20la%20disponibilidad%20para%20realizar%20la%20compra.%20¡Gracias!"
+                  target="_blank"
+                    class="btn btn-primary"
+                  >
+                    Obtener Descuento
+                  </a>
+                </div>
+                <div class="promo-card bg-dark text-white p-3 m-2" style="border-radius: 20px; flex: 1 1 30%; max-width: 400px">
+                  <h3>Entradas VIP</h3>
+                  <p>
+                    Obtén un 20% de descuento en tu entrada VIP. ¡Experiencia exclusiva!
+                  </p>
+                  <p style="font-size: 1.2rem; font-weight: bold;">
+                    <span style="text-decoration: line-through; color: #e62222;">$12.000</span>  
+                    <span style="color:green; font-size: 1.8rem;">$8.000</span>
+                  </p>
+                  
+                  <a
+                    href="https://api.whatsapp.com/send?phone=5493814685931&text=¡Hola!%20Estoy%20interesado%20en%20aprovechar%20el%2020%%20de%20descuento%20en%20entradas%20VIP.%20¿Podrías%20confirmarme%20los%20detalles%20y%20la%20disponibilidad%20para%20realizar%20la%20compra%20por%20favor?%20¡Gracias!"
                     target="_blank"
                     class="btn btn-primary"
                   >
-                    Comprar Ahora
+                    Obtener Descuento
                   </a>
                 </div>
-                <div
-                  class="promo-card bg-dark text-white p-3 m-2"
-                  style="border-radius: 20px; flex: 1 1 30%; max-width: 400px"
-                >
-                  <h3>Descuento del 20% en Entradas VIP</h3>
-                  <p>
-                    Obtén un 20% de descuento en tu entrada VIP. ¡Experiencia
-                    exclusiva!
-                  </p>
-                  <button class="btn btn-primary">Comprar Ahora</button>
-                </div>
+                
                 <div
                   class="promo-card bg-dark text-white p-3 m-2"
                   style="border-radius: 20px; flex: 1 1 30%; max-width: 400px"
@@ -360,6 +370,140 @@
               </div>
             </div>
           </article>
+          <section class="birthday-section d-flex justify-content-center align-items-center mb-5">
+            <div class="container">
+              <div class="row">
+                <!-- Artículo de texto -->
+                <article class="col-12 col-lg-6">
+                  <h1 class="titulocelular" style="font-family: 'Roboto', sans-serif; color: white; margin-top: 100px;">¡Celebra tu Cumpleaños con Nosotros!🥳</h1>
+                  <p style="font-size: 1.2rem; color: white; margin-top: 30px;">
+                    ¡¿Es tu cumpleaños?! 🎉 ¡Tu entrada es completamente <b>GRATIS!</b> Solo tienes que <b>asegurarte detraer tu DNI, ¡y listo!</b> Ven a disfrutar de una fiesta increíble, llena de sorpresas, música y mucha diversión. ¡Te esperamos para que celebremos juntos tu gran día!
+                  </p>
+                  
+          
+                  <!-- Botón de WhatsApp -->
+                  <a href="https://api.whatsapp.com/send?phone=5493812024221"
+                     target="_blank"
+                     class="btn btn-success mt-4"
+                     style="font-size: 1rem; padding: 10px 20px; border-radius: 5px; text-decoration: none; color: white;">
+                    Pedir Entrada de Cumpleaños
+                  </a>
+                </article>
+          
+                <!-- Artículo de imagen -->
+                <article class=" col-12 col-lg-6 d-flex justify-content-center align-items-center p-4">
+                  <img src="img/tortadecumple.png" alt="Cumpleaños" class="img-fluid titulocelular" style="border-radius: 15px; margin-left: 50px;">
+                </article>
+              </div>
+            </div>
+          </section>
+
+          
+          
+          
+          
+          
+          
+
+          <article
+          class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100 mb-5"
+        >
+          <div class="text-center">
+            <img
+              src="img/logonavideño.png"
+              alt="Imagen Promocional"
+              style="
+                width: calc(100% - 30px);
+                max-width: 800px;
+                border-radius: 0px;
+                padding: 0 20px 30px;
+              "
+            />
+          </div>
+        </article>
+
+        <article class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100  slide-up">
+          <div class="promo-container text-center" style="width: 80%;">
+            <!-- Aviso Importante -->
+            <h2 style="color: white; margin-bottom: 30px">
+              ⚠️¡Aviso Importante!⚠️
+            </h2>
+            <p style="font-size: 1.2rem; color: #fff;">
+              Les informamos que los siguientes puntos son cruciales para la correcta participación en el evento. Por favor, revísalos cuidadosamente.
+            </p>
+        
+            <!-- Lista de ítems -->
+            <div class="promo-cards d-flex justify-content-around flex-wrap" style="margin-top: 40px;">
+              <div class="text-white p-3 m-2" style="border-radius: 20px; flex: 1 1 30%; max-width: 400px">
+                <h3>1. Si tomas, no manejes</h3>
+                <p>Por favor, sé responsable. Nos cuidemos entre todos.</p>
+              </div>
+              <div class="text-white p-3 m-2" style="border-radius: 20px; flex: 1 1 30%; max-width: 400px">
+                <h3>2. Indicaciones del personal</h3>
+                <p>Sigue las indicaciones del personal para un ingreso más rápido y seguro.</p>
+              </div>
+              <div class="text-white p-3 m-2" style="border-radius: 20px; flex: 1 1 30%; max-width: 400px">
+                <h3>3. Apertura</h3>
+                <p>El evento comienza 2 horas después del brindis. ¡No llegues tarde!</p>
+              </div>
+              <div class="text-white p-3 m-2" style="border-radius: 20px; flex: 1 1 30%; max-width: 400px">
+                <h3>4. Edades requeridas</h3>
+                <p>Mujeres +18 y Hombres +21. Acceso exclusivo con estas edades.</p>
+              </div>
+              <div class="text-white p-3 m-2" style="border-radius: 20px; flex: 1 1 30%; max-width: 400px">
+                <h3>5. Ingreso con DNI</h3>
+                <p>Es obligatorio presentar tu DNI para acceder al evento.</p>
+              </div>
+              <div class="text-white p-3 m-2" style="border-radius: 20px; flex: 1 1 30%; max-width: 400px">
+                <h3>6. Tolerancia cero</h3>
+                <p>No se permiten sustancias ilegales. Por favor, respeta esta regla.</p>
+              </div>
+              <div class="text-white p-3 m-2" style="border-radius: 20px; flex: 1 1 30%; max-width: 400px">
+                <h3>7. Seguridad en el ingreso</h3>
+                <p>La policía realizará cacheos minuciosos en el ingreso y monitoreo dentro del evento.</p>
+              </div>
+              <div class="text-white p-3 m-2" style="border-radius: 20px; flex: 1 1 30%; max-width: 400px">
+                <h3>8. Compra segura</h3>
+                <p>Adquiere tus entradas únicamente con RRPP oficiales para evitar inconvenientes.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100 mb-5">
+          <div class="promo-container text-center" style="width: 80%; margin-bottom: 50px">
+        
+            <div class="d-flex justify-content-around align-items-center flex-wrap" style="margin-top: 0px;">
+              <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
+                <img 
+                  src="/img/TAKIN.png" 
+                  alt="Logo 1" 
+                  style="width: 100%; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0,0,0,0.3);"
+                />
+              </div>
+              <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
+                <img 
+                  src="/img/Primario Blanco.png" 
+                  alt="Logo 2" 
+                  style="width: 100%; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0,0,0,0.3);"
+                />
+              </div>
+              <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
+                <img 
+                  src="/img/triplogofinal.png" 
+                  alt="Logo 3" 
+                  style="width: 100%; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0,0,0,0.3);"
+                />
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        
+
+
+        
+        
+
         </div>
       </section>
 
@@ -434,9 +578,7 @@
                           class="custom-p"
                           style="color: black; margin: 10px 0"
                         >
-                          Potencia tu visibilidad en línea con Google Ads. Atrae
-                          la atención de tus clientes mediante mensajes
-                          relevantes y personalizados.
+                        ¡Prepárate para una noche inolvidable! Disfruta de la música en vivo de los mejores DJs mientras vives una experiencia única en nuestro evento. ¡No te lo puedes perder!
                         </p>
                       </article>
                     </section>
@@ -466,9 +608,7 @@
 
                       <article class="col-12 text-center">
                         <p class="" style="color: black; margin: 10px 0">
-                          Llama la atención de tus clientes con mensajes
-                          impactantes y personalizados, aprovechando la
-                          estrategia de Email Marketing.
+                          ¡Elige tu ritmo! pista Cachengue, disfruta de los éxitos del momento, mientras que en la pista alternativa te hará vibrar con sonidos únicos. ¡Fiesta asegurada!
                         </p>
                       </article>
                     </section>
@@ -496,8 +636,7 @@
                       </article>
                       <article class="col-12 text-center">
                         <p class="" style="color: black; margin: 10px 0">
-                          Te brindamos presencia online. Conectá con tus
-                          clientes, por medio de una web profesional.
+                          Disfruta de una experiencia única en nuestro sector VIP, con acceso exclusivo y beneficios especiales. ¡La mejor forma de vivir el evento!
                         </p>
                       </article>
                     </section>
@@ -519,7 +658,7 @@
                         />
                       </article>
                       <article class="col-12 text-center">
-                        <h3 class="" style="color: black">La Mejor Onda 🎉</h3>
+                        <h3 class="" style="color: black">3 Barras de tragos 🍹</h3>
                       </article>
                       <article class="col-12 text-center">
                         <p class="" style="color: black; margin: 10px 0">
@@ -546,7 +685,7 @@
                       </article>
                       <article class="col-12 text-center">
                         <h3 class="" style="color: black">
-                          Golosinas Toda la Noche 🍬
+                          Golosinas 🍬
                         </h3>
                       </article>
                       <article class="col-12 text-center">

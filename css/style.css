@@ -612,6 +612,98 @@
       margin-left: 0 !important;
     }
   }
+
+/* Estilos generales para la sección de cumpleaños */
+.birthday-section {
+  padding: 40px 0;
+}
+
+.birthday-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.birthday-section h1 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.birthday-section p {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.birthday-section .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.birthday-section .btn-success {
+  background-color: #28a745; /* Color de fondo para el botón de WhatsApp */
+  border: none;
+}
+
+.birthday-section .btn-success:hover {
+  background-color: #218838; /* Color del fondo cuando pasa el cursor */
+}
+
+/* Estilo para la imagen */
+.birthday-section img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+/* Estilo para asegurar que el contenido esté centrado en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .birthday-section h1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .birthday-section p {
+    font-size: 1rem;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .birthday-section .row {
+    flex-direction: column; /* Apilar los artículos verticalmente en pantallas móviles */
+    align-items: center; /* Centrar los artículos */
+  }
+
+  .birthday-section .col-12 {
+    text-align: center;
+  }
+
+  .birthday-section .col-lg-6 {
+    width: 100%; /* Hacer las columnas ocupen todo el ancho en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .birthday-section img {
+    margin-left: 0; /* Eliminar el margen izquierdo en pantallas pequeñas */
+    margin-top: 20px;
+  }
+
+  .birthday-section .btn {
+    width: 80%; /* Hacer que el botón ocupe todo el ancho en móviles */
+  }
+}
+
+
+
   
   section.img {
     columns: 2;

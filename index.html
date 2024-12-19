@@ -305,7 +305,7 @@
       </div>
     </article>
   </div>
-</section>
+
 
 <script>
   // Lazy Loading para los videos
@@ -404,23 +404,25 @@
                     ¡¿Es tu cumpleaños?! 🎉 ¡Tu entrada es completamente <b>GRATIS!</b> Solo tienes que <b>asegurarte detraer tu DNI, ¡y listo!</b> Ven a disfrutar de una fiesta increíble, llena de sorpresas, música y mucha diversión. ¡Te esperamos para que celebremos juntos tu gran día!
                   </p>
                   
-          
                   <!-- Botón de WhatsApp -->
-                  <a href="https://api.whatsapp.com/send?phone=5493812024221"
-                     target="_blank"
-                     class="btn btn-success mt-4"
-                     style="font-size: 1rem; padding: 10px 20px; border-radius: 5px; text-decoration: none; color: white;">
-                    Pedir Entrada de Cumpleaños
-                  </a>
+                  <div class="text-center mt-4">
+                    <a href="https://api.whatsapp.com/send?phone=5493812024221"
+                       target="_blank"
+                       class="btn btn-success"
+                       style="font-size: 1rem; padding: 10px 20px; border-radius: 5px; text-decoration: none; color: white;">
+                      Pedir Entrada de Cumpleaños
+                    </a>
+                  </div>
                 </article>
           
                 <!-- Artículo de imagen -->
-                <article class=" col-12 col-lg-6 d-flex justify-content-center align-items-center p-4">
+                <article class="col-12 col-lg-6 d-flex justify-content-center align-items-center p-4">
                   <img src="img/tortadecumple.png" alt="Cumpleaños" class="img-fluid titulocelular" style="border-radius: 15px; margin-left: 50px;">
                 </article>
               </div>
             </div>
           </section>
+          
 
           
           
@@ -498,7 +500,8 @@
 
         <article class="col-12 d-flex justify-content-center w-100 mb-5">
           <div class="promo-container text-center" style="width: 80%; margin-bottom: 50px;">
-            <div class="d-flex justify-content-around align-items-center flex-wrap" style="margin-top: 0;">
+            <div class="d-flex justify-content-center align-items-center flex-wrap" style="margin-top: 0;">
+              <!-- Logo 1 -->
               <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
                 <img 
                   src="/img/TAKIN.webp" 
@@ -506,45 +509,41 @@
                   width="150" 
                   height="150" 
                   loading="lazy" 
-                  style="border-radius: 10px;"
+                  style="border-radius: 10px; width: 100%; max-width: 150px;"
                 />
               </div>
+
               <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
                 <img 
-                  src="/img/Primario%20Blanco.webp" 
+                  src="/img/triplogofinal1.webp" 
+                  alt="Logo 3" 
+                  width="200" 
+                  height="200" 
+                  loading="lazy" 
+                  style="border-radius: 10px; width: 100%; max-width: 200px;"
+                />
+              </div>
+              <!-- Logo 2 -->
+              <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
+                <img 
+                  src="/img/PrimarioBlanco.webp" 
                   alt="Logo 2" 
                   width="150" 
                   height="150" 
                   loading="lazy" 
-                  style="border-radius: 10px;"
+                  style="border-radius: 10px; width: 100%; max-width: 150px;"
                 />
               </div>
-              <div class="logo-container" style="flex: 1 1 30%; max-width: 150px; margin: 10px;">
-                <img 
-                  src="/img/triplogofinal.webp" 
-                  alt="Logo 3" 
-                  width="150" 
-                  height="150" 
-                  loading="lazy" 
-                  style="border-radius: 10px;"
-                />
-              </div>
+              <!-- Logo 3 -->
             </div>
           </div>
         </article>
-
-
         
 
-        
-        
-
-
-        
-        
 
         </div>
       </section>
+  </section>
 
       <section
         id="single-page"
@@ -1414,6 +1413,22 @@
         </small>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lazyImages = document.querySelectorAll("img[loading='lazy']");
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src || img.src;
+              observer.unobserve(img);
+            }
+          });
+        });
+        lazyImages.forEach(img => observer.observe(img));
+      });
+    </script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script

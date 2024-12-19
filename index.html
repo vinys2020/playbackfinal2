@@ -256,7 +256,6 @@
   // Acción al hacer clic o tocar el parlante
   speakerButton.addEventListener('click', toggleSpeaker);
   speakerButton.addEventListener('touchstart', (e) => {
-    e.preventDefault(); // Prevenir la acción predeterminada del touch
     toggleSpeaker();
   });
 </script>

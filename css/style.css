@@ -606,15 +606,8 @@
     opacity: 1;
   }
 
-  /* Placeholder */
-  .lazyload {
-    background-color: #f3f3f3;
-    background-image: url('img/loading-placeholder.jpg');
-    background-size: cover;
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+
+  
 
 img.lazy {
   filter: blur(10px);

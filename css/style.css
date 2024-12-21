@@ -375,7 +375,7 @@
     animation: none !important; /* Deshabilita la animación con prioridad */
   }
   
-  section.img img:nth-child(50) {
+  section.img img:nth-child(42) {
     animation: none !important; /* Deshabilita la animación con prioridad */
   }
   
@@ -567,7 +567,37 @@
   
     animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 20% cover 40%;
+    animation-range: entry 0% cover 0%;
+  }
+
+  .rrpp-item {
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .rrpp-item:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  .list-group-item {
+    border: none;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .btn-success {
+    background-color: #25d366; /* Color de WhatsApp */
+    border-color: #25d366;
+  }
+
+  .btn-success:hover {
+    background-color: #128c7e;
+    border-color: #128c7e;
   }
   
   @keyframes reveal {
@@ -594,7 +624,7 @@
       width: 100%; /* Asegura que ocupe todo el ancho */
       object-fit: cover; /* Hace que la imagen se recorte y mantenga proporciones */
       margin: 10px; /* Reduce el margen entre imágenes */
-      animation-range: entry 10% cover 18%;
+      animation-range: entry 0% cover 0%;
 
   }
 }

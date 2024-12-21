@@ -597,23 +597,24 @@
     border-color: #128c7e;
   }
 
- .lazyload {
-  background-color: #f3f3f3; /* Color de fondo mientras se carga */
-  background-image: url('img/loading-placeholder.jpg'); /* Marcador de carga */
-  background-size: cover;
-  display: block;
-  width: 100%;
-  height: auto;
-}
+  /* Añadir un efecto de desvanecimiento a la carga */
+  .lazyload {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+  }
+  .lazyload.fade {
+    opacity: 1;
+  }
 
-.lazyload.loading {
-  background-image: url('img/loading-placeholder.jpg'); /* Si prefieres un marcador de carga */
-}
-
-.image-container {
-  position: relative;
-  display: inline-block;
-}
+  /* Placeholder */
+  .lazyload {
+    background-color: #f3f3f3;
+    background-image: url('img/loading-placeholder.jpg');
+    background-size: cover;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
 img.lazy {
   filter: blur(10px);

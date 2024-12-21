@@ -604,7 +604,7 @@
       height: 25vh; /* Ajusta la altura al 60% del viewport */
       width: 100%; /* Asegura que ocupe todo el ancho */
       object-fit: cover; /* Hace que la imagen se recorte y mantenga proporciones */
-      margin: 10px; /* Reduce el margen entre imágenes */
+      margin-bottom: 10px; /* Reduce el margen entre imágenes */
 
   }
 }

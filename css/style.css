@@ -586,3 +586,11 @@
         transform: translateY(0) scale(1);
     }
   }
+
+  /* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  section.img img {
+      height: auto;
+      object-fit: cover; /* Mantiene el enfoque visual de la imagen */
+  }
+}

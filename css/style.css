@@ -375,7 +375,7 @@
     animation: none !important; /* Deshabilita la animación con prioridad */
   }
   
-  section.img img:nth-child(26) {
+  section.img img:nth-child(17) {
     animation: none !important; /* Deshabilita la animación con prioridad */
   }
   
@@ -567,7 +567,7 @@
   
     animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 10% cover 15%;
+    animation-range: entry 20% cover 40%;
   }
   
   @keyframes reveal {
@@ -587,10 +587,14 @@
     }
   }
 
-  /* Ajustes para pantallas pequeñas */
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   section.img img {
-      height: auto;
-      object-fit: cover; /* Mantiene el enfoque visual de la imagen */
+      height: 25vh; /* Ajusta la altura al 60% del viewport */
+      width: 100%; /* Asegura que ocupe todo el ancho */
+      object-fit: cover; /* Hace que la imagen se recorte y mantenga proporciones */
+      margin: 10px; /* Reduce el margen entre imágenes */
+      animation-range: entry 10% cover 18%;
+
   }
 }

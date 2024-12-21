@@ -286,22 +286,6 @@
   </div>
 </div>
 
-
-      <script>
-        function showPasswordField() {
-          document.getElementById("passwordField").classList.remove("d-none");
-        }
-
-        function checkPassword() {
-          const password = document.getElementById("adminPassword").value;
-          if (password === "casa") {
-            window.location.href = "admin.html";
-          } else {
-            alert("Contraseña incorrecta. Intente nuevamente.");
-          }
-        }
-      </script>
-
 <section
   id="ultimos-proyectos"
   class="pb-0"
@@ -442,6 +426,92 @@
         />
       </div>
     </article>
+
+    <article
+    class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100 mb-5"
+    >
+    <div class="container mt-5">
+
+      <div class="alert alert-warning text-center my-4" style="background-color: #ffc107; color: #212529; font-weight: bold; font-size: 1.25rem;">
+        <h3 style="margin: 0;">¡Disponible mañana, Domingo!</h3>
+      </div>
+      
+      <h1 class="text-center mb-5" style="color: white;">¡Encuentra las Entradas por la Ciudad y Gana Hasta 4 para el 24!</h1>
+      <p class="text-center" style="color: white;">El objetivo es encontrar las entradas escondidas por toda la ciudad. A continuación, te dejamos las pistas de los posibles lugares donde las hemos escondido. Puedes intentar adivinarlas aquí en la web, ¡así no tienes que recorrer toda la ciudad y puedes ir directamente al lugar cuando aciertes!</p>
+      
+
+      <!-- Artículo principal para todas las entradas -->
+      <article class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100 mb-5">
+          <section class="row w-100">
+
+              <!-- Artículo 1: Entrada N1 -->
+              <article class="col-md-6 col-lg-3 mb-4">
+                  <div class="entrada-card">
+                    <h5 style="color: white; font-size: 1.25rem; font-weight: bold; text-align: center;">¡Entrada N°1!</h5>
+                    <button class="btn btn-primary" onclick="mostrarPista(1)">Pista</button>
+                      <div id="pista1" class="adivinanza">
+                          <p style="color: white;">"Las pistas estaran disponibles mañana domingo 22 de diciembre"</p>
+                          <input type="text" id="respuesta1" class="form-control mt-2" placeholder="Escribe tu respuesta">
+                          <button class="btn btn-success mt-2" onclick="comprobarRespuesta(1, 'Plaza de la Música')">Adivinar</button>
+                      </div>
+                  </div>
+              </article>
+
+              <!-- Artículo 2: Entrada N2 -->
+              <article class="col-md-6 col-lg-3 mb-4">
+                  <div class="entrada-card">
+                      <h5 style="color: white;">¡Entrada N°2!</h5>
+                      <button class="btn btn-primary" onclick="mostrarPista(2)">Pista</button>
+                      <div id="pista2" class="adivinanza">
+                          <p style="color: white;">"Las pistas estaran disponibles mañana domingo 22 de diciembre"</p>
+                          <input type="text" id="respuesta2" class="form-control mt-2" placeholder="Escribe tu respuesta">
+                          <button class="btn btn-success mt-2" onclick="comprobarRespuesta(2, 'Centro Comercial Solarium')">Adivinar</button>
+                      </div>
+                  </div>
+              </article>
+
+              <!-- Artículo 3: Entrada N3 -->
+              <article class="col-md-6 col-lg-3 mb-4">
+                  <div class="entrada-card">
+                      <h5 style="color: white;">¡Entrada N°3!</h5>
+                      <button class="btn btn-primary" onclick="mostrarPista(3)">Pista</button>
+                      <div id="pista3" class="adivinanza">
+                          <p style="color: white;">"Las pistas estaran disponibles mañana domingo 22 de diciembre"</p>
+                          <input type="text" id="respuesta3" class="form-control mt-2" placeholder="Escribe tu respuesta">
+                          <button class="btn btn-success mt-2" onclick="comprobarRespuesta(3, 'Café Central')">Adivinar</button>
+                      </div>
+                  </div>
+              </article>
+
+              <!-- Artículo 4: Entrada N4 -->
+              <article class="col-md-6 col-lg-3 mb-4">
+                  <div class="entrada-card">
+                      <h5 style="color: white;">¡Entrada N°4!</h5>
+                      <button class="btn btn-primary" onclick="mostrarPista(4)">Pista</button>
+                      <div id="pista4" class="adivinanza">
+                          <p style="color: white;">"Las pistas estaran disponibles mañana domingo 22 de diciembre"</p>
+                          <input type="text" id="respuesta4" class="form-control mt-2" placeholder="Escribe tu respuesta">
+                          <button class="btn btn-success mt-2" onclick="comprobarRespuesta(4, 'Museo de Arte Contemporáneo')">Adivinar</button>
+                      </div>
+                  </div>
+              </article>
+
+          </section>
+      </article>
+  </div>
+    </article>
+    
+
+
+
+
+
+
+
+
+
+
+
 
     <article
       class="col-12 col-md-12 col-lg-12 d-flex justify-content-center w-100 mb-5"
@@ -1167,6 +1237,7 @@
         </small>
       </div>
     </footer>
+    
     <script>
       // Lazy Loading para los videos
       document.addEventListener("DOMContentLoaded", function () {
@@ -1192,6 +1263,8 @@
         });
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const lazyImages = document.querySelectorAll("img[loading='lazy']");

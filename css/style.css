@@ -610,3 +610,82 @@ section.img img {
 
   }
 }
+
+
+/* Estilos CSS */
+.adivinanza {
+  display: none;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+.correcto {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+.incorrecto {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+.entrada-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.entrada-card button {
+  width: 100%;
+}
+
+.correcto-entrada {
+  background-color: #28a745; /* Verde para la respuesta correcta */
+  color: white;
+  font-weight: bold;
+}
+
+.incorrecto-entrada {
+  background-color: #dc3545; /* Rojo para la respuesta incorrecta */
+  color: white;
+  font-weight: bold;
+}
+/* Estilos generales para la sección de adivinanzas */
+.adivinanza-entrada {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 10px;
+}
+
+input {
+  margin-top: 10px;
+}
+
+.encontrada {
+  background-color: #ce0707; /* Fondo gris */
+  color: white;
+  font-weight: bold;
+}
+
+.estado-entrada {
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}

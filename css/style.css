@@ -548,24 +548,53 @@
 
 
   
-  section.img {
-    columns: 2;
-    padding: 16px 36px;
-    column-gap: 32px;
-    margin-top: 70px;
-  
-  
+
+section.img {
+  columns: 2;
+  padding: 16px 36px;
+  column-gap: 32px;
+  margin-top: 70px;
+
+
+}
+
+
+section.img img {
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+
+
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
+
+section.img img:nth-child(1) {
+  animation: none !important; /* Deshabilita la animación con prioridad */
+}
+
+section.img img:nth-child(13) {
+  animation: none !important; /* Deshabilita la animación con prioridad */
+}
+
+@keyframes reveal {
+  from {
+      opacity: 0;
+      transform: translateY(50px) scale(0.5);
   }
-  
-  
-  section.img img {
-    border-radius: 4px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 32px;
-  
-  
+
+  50% {
+      opacity: 0.5;
+      transform: translateY(12.5px) scale(0.875);
   }
+
+  to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+  }
+}
 
   .rrpp-item {
     font-size: 16px;
@@ -597,26 +626,6 @@
     border-color: #128c7e;
   }
 
-  /* Añadir un efecto de desvanecimiento a la carga */
-  .lazyload {
-    opacity: 0;
-    transition: opacity 0.3s ease-in;
-  }
-  .lazyload.fade {
-    opacity: 1;
-  }
-
-
-  
-
-img.lazy {
-  filter: blur(10px);
-  transition: filter 0.3s ease;
-}
-
-img.lazy[src] {
-  filter: blur(0);
-}
   
   
 

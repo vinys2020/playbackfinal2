@@ -62,6 +62,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+// Cerrar el menú cuando se hace clic en un enlace
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse);
+    bootstrapCollapse.hide();
+  });
+});
+
+// Cerrar el menú cuando se toca fuera del área del navbar o en el botón toggler
+document.addEventListener('click', (event) => {
+  const navbar = document.querySelector('.navbar-collapse');
+  const toggler = document.querySelector('.navbar-toggler');
+  
+  // Si el navbar está abierto y se hace clic fuera de él o en el toggler, se cierra
+  if (navbar.classList.contains('show') && (!navbar.contains(event.target) || toggler.contains(event.target))) {
+    new bootstrap.Collapse(navbar).hide();
+  }
+});
+
+// Alternar el menú cuando se hace clic en el botón toggler
+document.querySelector('.navbar-toggler').addEventListener('click', () => {
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  if (navbarCollapse.classList.contains('show')) {
+    new bootstrap.Collapse(navbarCollapse).hide();
+  } else {
+    new bootstrap.Collapse(navbarCollapse).show();
+  }
+});
+
+
+    
+  
+
   
 // Objeto con las respuestas correctas para cada entrada
 const respuestasCorrectas = {

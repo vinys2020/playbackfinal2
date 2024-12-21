@@ -61,7 +61,21 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
   
-
+  document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.lazyload');
+    
+    images.forEach(img => {
+      img.addEventListener('load', () => {
+        img.classList.remove('loading');
+        img.src = img.getAttribute('data-src');  // Cambia src por data-src cuando se carga
+      });
+  
+      // Para cargar las imágenes cuando el contenido de la página esté listo
+      img.src = img.getAttribute('data-src');
+    });
+  });
+  
+  
 
 
   

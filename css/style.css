@@ -564,37 +564,8 @@ section.img img {
   width: 100%;
   height: auto;
   margin-bottom: 32px;
-
-
-  animation: reveal linear both;
-  animation-timeline: view();
-  animation-range: entry 20% cover 30%;
 }
 
-section.img img:nth-child(1) {
-  animation: none !important; /* Deshabilita la animación con prioridad */
-}
-
-section.img img:nth-child(13) {
-  animation: none !important; /* Deshabilita la animación con prioridad */
-}
-
-@keyframes reveal {
-  from {
-      opacity: 0;
-      transform: translateY(50px) scale(0.5);
-  }
-
-  50% {
-      opacity: 0.5;
-      transform: translateY(12.5px) scale(0.875);
-  }
-
-  to {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-  }
-}
 
   .rrpp-item {
     font-size: 16px;

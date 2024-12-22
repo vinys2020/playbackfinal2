@@ -99,11 +99,12 @@ document.querySelector('.navbar-toggler').addEventListener('click', () => {
   
 // Objeto con las respuestas correctas para cada entrada
 const respuestasCorrectas = {
-  entrada1: "playback", // Sustituye 'respuestaCorrecta1' con la respuesta de la entrada 1
-  entrada2: "playback", // Sustituye 'respuestaCorrecta2' con la respuesta de la entrada 2
-  entrada3: "playback", // Sustituye 'respuestaCorrecta3' con la respuesta de la entrada 3
-  entrada4: "Playback"  // Sustituye 'respuestaCorrecta4' con la respuesta de la entrada 4
+  entrada1: "Plaza Ahimes", // Sustituye 'respuestaCorrecta1' con la respuesta de la entrada 1
+  entrada2: "Terminal de omnibus", // Sustituye 'respuestaCorrecta2' con la respuesta de la entrada 2
+  entrada3: "Plaza de los Enamorados", // Sustituye 'respuestaCorrecta3' con la respuesta de la entrada 3
+  entrada4: "Plaza Mitre"  // Sustituye 'respuestaCorrecta4' con la respuesta de la entrada 4
 };
+
 
 // Función para mostrar u ocultar la pista con un efecto deslizante
 function mostrarPista(entrada) {

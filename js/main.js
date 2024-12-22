@@ -99,7 +99,7 @@ document.querySelector('.navbar-toggler').addEventListener('click', () => {
   
 // Objeto con las respuestas correctas para cada entrada
 const respuestasCorrectas = {
-  entrada1: "Plaza Ahimes", // Sustituye 'respuestaCorrecta1' con la respuesta de la entrada 1
+  entrada1: "Plaza Haimes", // Sustituye 'respuestaCorrecta1' con la respuesta de la entrada 1
   entrada2: "Terminal de omnibus", // Sustituye 'respuestaCorrecta2' con la respuesta de la entrada 2
   entrada3: "Plaza de los Enamorados", // Sustituye 'respuestaCorrecta3' con la respuesta de la entrada 3
   entrada4: "Plaza Mitre"  // Sustituye 'respuestaCorrecta4' con la respuesta de la entrada 4
